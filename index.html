@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Wall Designer - WebGL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar-left"></div>
+        <div class="main-content">
+            <h2 class="title">Minecraft Wall Designer</h2>
+            
+            <div class="toolbar">
+                <div class="tool-buttons">
+                    <button class="tool-btn active" data-tool="line">Line Tool</button>
+                    <button class="tool-btn" data-tool="rectangle">Rectangle Tool</button>
+                    <button class="tool-btn" data-tool="circle">Circle Tool</button>
+                    <button class="tool-btn" data-tool="erase">Erase Tool</button>
+                </div>
+                <button class="undo-btn">Undo Last Line</button>
+                <span class="draw-info" id="drawInfo"></span>
+            </div>
+
+            <div class="pan-controls">
+                <button class="pan-btn" data-pan="up">▲</button>
+                <button class="pan-btn" data-pan="left">◀</button>
+                <button class="pan-btn" data-pan="right">▶</button>
+                <button class="pan-btn" data-pan="down">▼</button>
+                <span class="view-pos">View center: (<span id="viewX">1000</span>, <span id="viewY">1000</span>)</span>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="glCanvas" width="800" height="600"></canvas>
+            </div>
+
+            <div class="bottom-controls">
+                <div>
+                    <label for="numPoles">Default number of poles:</label>
+                    <input type="number" id="numPoles" min="2" max="50" value="5">
+                </div>
+                <span class="zoom-info">Zoom: <span id="cellSize">24</span>px (scroll to zoom)</span>
+            </div>
+            <p class="info-text">Poles (brown) are placed evenly along each wall line you draw.</p>
+        </div>
+
+        <div class="sidebar-right">
+            <h3>Wall Lines</h3>
+            <div id="linesList">
+                <div class="empty-state">No lines drawn.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="geometry.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
