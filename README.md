@@ -1,6 +1,6 @@
 # Minecraft Wall Designer - Web Version
 
-A Canvas 2D-based web version of the Minecraft Wall Designer that runs directly in the browser and can be deployed on GitHub Pages.
+A Canvas 2D-based web version of the Minecraft Designer that runs directly in the browser.
 
 ## Features
 
@@ -9,16 +9,6 @@ A Canvas 2D-based web version of the Minecraft Wall Designer that runs directly 
 - **Pole Placement**: Automatically place poles evenly along your walls
 - **Customization**: Adjust pole count and angle for circles/rectangles
 - **Web-Ready**: Runs entirely in the browser with WebGL rendering
-- **GitHub Pages Compatible**: Deploy directly as a static site
-
-## Getting Started
-
-1. Open `index.html` in a modern web browser
-2. Use the toolbar to select a drawing tool
-3. Click and drag on the canvas to draw shapes
-4. Adjust poles and angles in the right sidebar
-5. Use arrow keys or pan buttons to navigate the grid
-6. Scroll to zoom in/out
 
 ## Controls
 
